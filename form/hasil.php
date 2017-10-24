@@ -19,7 +19,7 @@
 			$DBName ="instagram";
 			$conn = new mysqli($DBServer, $DBUser, $DBPass, $DBName);
 
-			if ($conn) {
+			if ($conn->connect_error) {
 				trigger_error('Database connection failed: '  . $conn->connect_error, E_USER_ERROR);
 			}
 			echo"<tr><td>Nama</td><td>:</td><td>$nama</td></tr>";
